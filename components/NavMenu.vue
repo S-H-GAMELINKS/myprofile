@@ -29,10 +29,10 @@
         </el-submenu>
         <el-submenu index="1-4">
           <template slot="title">Work</template>
-          <el-menu-item index="1-3-1">Lancers</el-menu-item>
-          <el-menu-item index="1-3-2">CrowdWorks</el-menu-item>
-          <el-menu-item index="1-3-3">Coconala</el-menu-item>
-          <el-menu-item index="1-3-4">Skima</el-menu-item>
+          <el-menu-item index="1-4-1">Lancers</el-menu-item>
+          <el-menu-item index="1-4-2">CrowdWorks</el-menu-item>
+          <el-menu-item index="1-4-3">Coconala</el-menu-item>
+          <el-menu-item index="1-4-4">Skima</el-menu-item>
         </el-submenu>
       </el-submenu>
     </el-menu>
