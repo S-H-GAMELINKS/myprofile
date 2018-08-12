@@ -1,7 +1,4 @@
 module.exports = {
-  router: {
-    base: 'myprofile'
-  },
   /*
   ** Headers of the page
   */
