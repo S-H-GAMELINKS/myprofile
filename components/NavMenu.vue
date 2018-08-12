@@ -29,10 +29,9 @@
         </el-submenu>
         <el-submenu index="1-4">
           <template slot="title">Work</template>
-          <el-menu-item index="1-4-1">Lancers</el-menu-item>
-          <el-menu-item index="1-4-2">CrowdWorks</el-menu-item>
-          <el-menu-item index="1-4-3">Coconala</el-menu-item>
-          <el-menu-item index="1-4-4">Skima</el-menu-item>
+          <div v-for="(w, key, index) in work" :key="index">
+          <el-menu-item :index="1-4-1"><a :href="w.link">{{w.name}}</a></el-menu-item>
+          </div>
         </el-submenu>
       </el-submenu>
     </el-menu>
@@ -40,8 +39,25 @@
 </el-row>
 </template>
 
+<style>
+a{
+  color: white;   
+}
+</style>
+
+
 <script>
   export default {
+    data: function() {
+        return {
+            work: [
+                {link: "https://www.lancers.jp/profile/S_H_", name: "Lancers" },
+                {link: "https://crowdworks.jp/public/employees/1497011", name: "CrowdWorks" },
+                {link: "https://coconala.com/users/410038", name: "Coconala" },
+                {link: "https://skima.jp/u/id33529/", name: "Skima" },
+            ]
+        }
+    },
     methods: {
       handleOpen(key, keyPath) {
         console.log(key, keyPath);
