@@ -20,17 +20,16 @@
           <el-menu-item index="1-2-1">Game</el-menu-item>
           <el-menu-item index="1-2-2">Other</el-menu-item>
         </el-submenu>
-            <el-submenu index="1-3">
+        <el-submenu index="1-3">
           <template slot="title">SNS</template>
-          <el-menu-item index="1-3-1">Mastodon</el-menu-item>
-          <el-menu-item index="1-3-2">GitHub</el-menu-item>
-          <el-menu-item index="1-3-3">Twitter</el-menu-item>
-          <el-menu-item index="1-3-4">Twitter</el-menu-item>
+          <div v-for="(s, key, index) in sns" :key="index">
+            <el-menu-item :index="1-4-index"><a :href="s.link">{{s.name}}</a></el-menu-item>
+          </div>
         </el-submenu>
         <el-submenu index="1-4">
           <template slot="title">Work</template>
           <div v-for="(w, key, index) in work" :key="index">
-          <el-menu-item :index="1-4-index"><a :href="w.link">{{w.name}}</a></el-menu-item>
+            <el-menu-item :index="1-4-index"><a :href="w.link">{{w.name}}</a></el-menu-item>
           </div>
         </el-submenu>
       </el-submenu>
@@ -45,11 +44,17 @@ a{
 }
 </style>
 
-
 <script>
   export default {
     data: function() {
         return {
+            sns: [
+                {link: "https://gamelinks007.net/@S_H_", name: "Mastodon"},
+                {link: "https://github.com/S-H-GAMELINKS", name: "GitHub"},
+                {link: "https://twitter.com/GAME_LINKS_", name: "Twitter"},
+                {link: "https://qiita.com/S_H_", name: "Qiita"},
+                {link: "https://speakerdeck.com/gamelinks007", name: "SpeckerDeck"},
+            ],
             work: [
                 {link: "https://www.lancers.jp/profile/S_H_", name: "Lancers" },
                 {link: "https://crowdworks.jp/public/employees/1497011", name: "CrowdWorks" },
