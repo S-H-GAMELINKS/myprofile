@@ -34,6 +34,7 @@
             <el-menu-item :index="1-5-index"><a :href="w.link">{{w.name}}</a></el-menu-item>
           </div>
         </el-submenu>
+        <el-menu-item index="1-6"><a href="http://gamelinks007.hatenablog.com/">Blog</a></el-menu-item>
       </el-submenu>
     </el-menu>
   </el-col>
