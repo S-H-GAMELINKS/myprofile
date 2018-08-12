@@ -50,7 +50,7 @@ a{
     data: function() {
         return {
             product: [
-                {link: "", name: "Game" },
+                {link: "/game", name: "Game" },
                 {link: "", name: "Other" },
             ],
             sns: [
