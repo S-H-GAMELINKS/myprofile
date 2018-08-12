@@ -23,6 +23,7 @@ module.exports = {
   */
   build: {
     vendor: ['element-ui'],
+    vendor: ['vue-animejs'],
     /*
     ** Run ESLint on save
     */
@@ -38,7 +39,8 @@ module.exports = {
     }
   },
   plugins: [
-    '~plugins/element-ui'
+    '~plugins/element-ui',
+    '~plugins/vue-animejs'
   ],
   css: [
     'element-ui/lib/theme-chalk/index.css'
