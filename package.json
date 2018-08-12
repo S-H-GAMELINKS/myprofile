@@ -6,15 +6,16 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-  "build": "nuxt build",
-  "start": "nuxt start",
-  "generate": "nuxt generate",
-  "deploy": "push-dir --dir=dist --branch=master --cleanup"
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "deploy": "push-dir --dir=dist --branch=master --cleanup"
   },
   "dependencies": {
     "element-ui": "^2.4.6",
     "nuxt": "^1.0.0",
-    "push-dir": "^0.4.1"
+    "push-dir": "^0.4.1",
+    "vue-animejs": "^1.0.1"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
