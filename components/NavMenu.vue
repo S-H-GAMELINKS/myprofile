@@ -14,16 +14,25 @@
           <i class="el-icon-menu"></i>
           <span>Menu</span>
         </template>
-        <el-menu-item-group title="Group One">
-          <el-menu-item index="1-1">item one</el-menu-item>
-          <el-menu-item index="1-2">item one</el-menu-item>
-        </el-menu-item-group>
-        <el-menu-item-group title="Group Two">
-          <el-menu-item index="1-3">item three</el-menu-item>
-        </el-menu-item-group>
+          <el-menu-item index="1-1">Profile</el-menu-item>
+        <el-submenu index="1-2">
+          <template slot="title">Products</template>
+          <el-menu-item index="1-2-1">Game</el-menu-item>
+          <el-menu-item index="1-2-2">Other</el-menu-item>
+        </el-submenu>
+            <el-submenu index="1-3">
+          <template slot="title">SNS</template>
+          <el-menu-item index="1-3-1">Mastodon</el-menu-item>
+          <el-menu-item index="1-3-2">GitHub</el-menu-item>
+          <el-menu-item index="1-3-3">Twitter</el-menu-item>
+          <el-menu-item index="1-3-4">Twitter</el-menu-item>
+        </el-submenu>
         <el-submenu index="1-4">
-          <template slot="title">item four</template>
-          <el-menu-item index="1-4-1">item one</el-menu-item>
+          <template slot="title">Work</template>
+          <el-menu-item index="1-3-1">Lancers</el-menu-item>
+          <el-menu-item index="1-3-2">CrowdWorks</el-menu-item>
+          <el-menu-item index="1-3-3">Coconala</el-menu-item>
+          <el-menu-item index="1-3-4">Skima</el-menu-item>
         </el-submenu>
       </el-submenu>
     </el-menu>
