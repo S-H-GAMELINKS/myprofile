@@ -14,23 +14,24 @@
           <i class="el-icon-menu"></i>
           <span>Menu</span>
         </template>
-          <el-menu-item index="1-1"><nuxt-link to="/profile">Profile</nuxt-link></el-menu-item>
-        <el-submenu index="1-2">
+          <el-menu-item index="1-1"><nuxt-link to="/">Top</nuxt-link></el-menu-item>
+          <el-menu-item index="1-2"><nuxt-link to="/profile">Profile</nuxt-link></el-menu-item>
+        <el-submenu index="1-3">
           <template slot="title">Products</template>
           <div v-for="(p, key, index) in product" :key="index">
-            <el-menu-item :index="1-2-index"><nuxt-link :to="p.link">{{p.name}}</nuxt-link></el-menu-item>
-          </div>
-        </el-submenu>
-        <el-submenu index="1-3">
-          <template slot="title">SNS</template>
-          <div v-for="(s, key, index) in sns" :key="index">
-            <el-menu-item :index="1-3-index"><a :href="s.link">{{s.name}}</a></el-menu-item>
+            <el-menu-item :index="1-3-index"><nuxt-link :to="p.link">{{p.name}}</nuxt-link></el-menu-item>
           </div>
         </el-submenu>
         <el-submenu index="1-4">
+          <template slot="title">SNS</template>
+          <div v-for="(s, key, index) in sns" :key="index">
+            <el-menu-item :index="1-4-index"><a :href="s.link">{{s.name}}</a></el-menu-item>
+          </div>
+        </el-submenu>
+        <el-submenu index="1-5">
           <template slot="title">Work</template>
           <div v-for="(w, key, index) in work" :key="index">
-            <el-menu-item :index="1-4-index"><a :href="w.link">{{w.name}}</a></el-menu-item>
+            <el-menu-item :index="1-5-index"><a :href="w.link">{{w.name}}</a></el-menu-item>
           </div>
         </el-submenu>
       </el-submenu>

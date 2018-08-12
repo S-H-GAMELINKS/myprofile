@@ -7,10 +7,10 @@
     <div>
       <app-logo/>
       <h1 class="title">
-        myprofile
+        S.H.
       </h1>
       <h2 class="subtitle">
-        Nuxt.js project
+        GAMELINKS
       </h2>
     </div>
   </section>
