@@ -14,7 +14,7 @@
           <i class="el-icon-menu"></i>
           <span>Menu</span>
         </template>
-          <el-menu-item index="1-1">Profile</el-menu-item>
+          <el-menu-item index="1-1"><nuxt-link to="/profile">Profile</nuxt-link></el-menu-item>
         <el-submenu index="1-2">
           <template slot="title">Products</template>
           <div v-for="(p, key, index) in product" :key="index">
