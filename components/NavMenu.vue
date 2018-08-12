@@ -24,7 +24,7 @@
         <el-submenu index="1-3">
           <template slot="title">SNS</template>
           <div v-for="(s, key, index) in sns" :key="index">
-            <el-menu-item :index="1-4-index"><a :href="s.link">{{s.name}}</a></el-menu-item>
+            <el-menu-item :index="1-3-index"><a :href="s.link">{{s.name}}</a></el-menu-item>
           </div>
         </el-submenu>
         <el-submenu index="1-4">
