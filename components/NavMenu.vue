@@ -51,7 +51,7 @@ a{
         return {
             product: [
                 {link: "/game", name: "Game" },
-                {link: "", name: "Other" },
+                {link: "/other", name: "Other" },
             ],
             sns: [
                 {link: "https://gamelinks007.net/@S_H_", name: "Mastodon"},
