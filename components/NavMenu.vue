@@ -30,7 +30,7 @@
         <el-submenu index="1-4">
           <template slot="title">Work</template>
           <div v-for="(w, key, index) in work" :key="index">
-          <el-menu-item :index="1-4-1"><a :href="w.link">{{w.name}}</a></el-menu-item>
+          <el-menu-item :index="1-4-index"><a :href="w.link">{{w.name}}</a></el-menu-item>
           </div>
         </el-submenu>
       </el-submenu>
