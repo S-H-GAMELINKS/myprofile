@@ -9,7 +9,9 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "deploy": "push-dir --dir=dist --branch=master --cleanup"
+    "deploy": "push-dir --dir=dist --branch=master --cleanup",
+    "build:master": "DEPLOY_ENV=GH_PAGES nuxt build",
+    "generate:master": "DEPLOY_ENV=GH_PAGES nuxt generate"
   },
   "dependencies": {
     "element-ui": "^2.4.6",
