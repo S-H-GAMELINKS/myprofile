@@ -1,4 +1,8 @@
 <template>
+<div>
+  <div class="side-menu">
+    <nav-menu/>
+  </div>
   <section class="container">
     <div>
       <app-logo/>
@@ -8,25 +12,18 @@
       <h2 class="subtitle">
         Nuxt.js project
       </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
-      </div>
     </div>
   </section>
+</div>
 </template>
 
 <script>
 import AppLogo from '~/components/AppLogo.vue'
+import NavMenu from '~/components/NavMenu.vue'
 
 export default {
   components: {
+    NavMenu,
     AppLogo
   }
 }
