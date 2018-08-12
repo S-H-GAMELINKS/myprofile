@@ -17,8 +17,9 @@
           <el-menu-item index="1-1">Profile</el-menu-item>
         <el-submenu index="1-2">
           <template slot="title">Products</template>
-          <el-menu-item index="1-2-1">Game</el-menu-item>
-          <el-menu-item index="1-2-2">Other</el-menu-item>
+          <div v-for="(p, key, index) in product" :key="index">
+            <el-menu-item :index="1-2-index"><nuxt-link :to="p.link">{{p.name}}</nuxt-link></el-menu-item>
+          </div>
         </el-submenu>
         <el-submenu index="1-3">
           <template slot="title">SNS</template>
@@ -48,6 +49,10 @@ a{
   export default {
     data: function() {
         return {
+            product: [
+                {link: "", name: "Game" },
+                {link: "", name: "Other" },
+            ],
             sns: [
                 {link: "https://gamelinks007.net/@S_H_", name: "Mastodon"},
                 {link: "https://github.com/S-H-GAMELINKS", name: "GitHub"},
