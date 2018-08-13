@@ -25,8 +25,6 @@ export default {
   data: function() {
     return {
       slides: [
-        {path: "/game/links1.png", content: "開発したノベルゲームエンジン"},
-        {path: "/game/links2.png", content: "半角英数のタグを使用します"},
         {path: "/game/hanakotoba1.png", content: "花言葉を使った短編"},
         {path: "/game/hanakotoba2.png", content: "コーディングなどを担当しました"},
         {path: "/game/igv1.png", content: "異能コメディ"},
