@@ -6,9 +6,9 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "start": "nuxt start",
     "build": "nuxt build",
-    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+    "start": "nuxt start",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "element-ui": "^2.4.6",
