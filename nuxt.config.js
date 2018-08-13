@@ -17,9 +17,9 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Nuxt.js project' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: './favicon.ico' }
     ],
-    script: [{ src: '/js/404-redirect-ghpages.js' }]
+    script: [{ src: './js/404-redirect-ghpages.js' }]
   },
   mode: 'spa',
   /*
@@ -47,11 +47,11 @@ module.exports = {
     }
   },
   plugins: [
-    '~plugins/element-ui',
-    '~plugins/vue-animejs'
+    './plugins/element-ui',
+    './plugins/vue-animejs'
   ],
   css: [
-    'element-ui/lib/theme-chalk/index.css'
+    './element-ui/lib/theme-chalk/index.css'
   ]
 }
 

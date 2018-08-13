@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
+    "start-static": "http-server ./dist",
     "generate": "nuxt generate",
     "build": "nuxt build",
     "start": "nuxt start",
@@ -13,6 +14,7 @@
   },
   "dependencies": {
     "element-ui": "^2.4.6",
+    "http-server": "^0.11.1",
     "nuxt": "^1.0.0",
     "push-dir": "^0.4.1",
     "vue-animejs": "^1.0.1"
