@@ -35,6 +35,7 @@
           </div>
         </el-submenu>
         <el-menu-item index="1-6"><a href="http://gamelinks007.hatenablog.com/">Blog</a></el-menu-item>
+        <el-menu-item index="1-7"><a href="https://github.com/S-H-GAMELINKS/myprofile">Source</a></el-menu-item>
       </el-submenu>
     </el-menu>
   </el-col>
