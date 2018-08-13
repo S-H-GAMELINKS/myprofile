@@ -2,7 +2,7 @@
   <el-carousel :interval="4000" type="card" width="600">
     <el-carousel-item v-for="(s, key, index) in slides" :key="index">
       <img :src="s.path" width="300" height="200" />
-      {{s.content}}
+      <h2>{{s.content}}</h2>
     </el-carousel-item>
   </el-carousel>
 </template>
