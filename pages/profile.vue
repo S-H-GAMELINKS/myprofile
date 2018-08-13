@@ -6,11 +6,11 @@
   <section class="container">
     <div>
       <h1 class="title">
-        Profile
+        {{name}}<br><br>
       </h1>
-      <h2 class="subtitle">
-        Nuxt.js project
-      </h2>
+      <h2 class="subtitle">スキル<br><br>{{mainskill}}<br><br></h2>
+      <h2 class="subtitle">サブスキル<br><br>{{subskill}}<br><br></h2>
+      <h2 class="subtitle">現在興味のあること<br><br>{{interest}}<br><br></h2>
     </div>
   </section>
 </div>
@@ -20,6 +20,14 @@
 import NavMenu from '~/components/NavMenu.vue'
 
 export default {
+  data: function() {
+    return {
+      name: "S.H.",
+      mainskill: "C/C++/DxLib/Ruby/Ruby on Rails/DXRuby/Vue.js/Nuxt.js",
+      subskill: "Heroku/Google Cloud Platform",
+      interest: "C++/Ruby/Mastodon/Vue.js",
+    }
+  },
   components: {
     NavMenu,
   }
