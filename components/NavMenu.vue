@@ -77,6 +77,20 @@
           </v-list-tile>
         </v-list-group>
 
+        <v-list-tile>
+          <v-list-tile-action>
+            <v-icon>fas fa-user-alt</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-title><a href="http://gamelinks007.hatenablog.com/">BLOG</a></v-list-tile-title>
+        </v-list-tile>
+
+        <v-list-tile>
+          <v-list-tile-action>
+            <v-icon>fas fa-user-alt</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-title><a href="https://github.com/S-H-GAMELINKS/myprofile">SOURCE</a></v-list-tile-title>
+        </v-list-tile>
+
       </v-list-group>
     </v-list>
   </v-navigation-drawer>
