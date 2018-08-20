@@ -42,7 +42,6 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    vendor: ['element-ui'],
     vendor: ['vue-animejs'],
     /*
     ** Run ESLint on save
@@ -59,7 +58,6 @@ module.exports = {
     }
   },
   plugins: [
-    './plugins/element-ui',
     './plugins/vue-animejs'
   ],
   css: [
