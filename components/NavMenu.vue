@@ -11,9 +11,7 @@
         <nuxt-link to="/"><v-list-tile-title>Top</v-list-tile-title></nuxt-link>
       </v-list-tile>
 
-      <v-list-group
-        value="true"
-      >
+      <v-list-group>
         <v-list-tile slot="activator">
           <v-list-tile-action>
             <v-icon>fas fa-bars</v-icon>
