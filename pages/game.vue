@@ -5,13 +5,13 @@
   </div>
   <section class="container">
     <div>
-      <slider :slides="slides"></slider>
       <h1 class="title">
         Game
       </h1>
       <h2 class="subtitle">
         これまでに制作してきたゲーム
       </h2>
+      <slider :slides="slides"></slider>
     </div>
   </section>
 </div>
