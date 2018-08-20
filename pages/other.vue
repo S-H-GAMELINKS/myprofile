@@ -5,13 +5,13 @@
   </div>
   <section class="container">
     <div>
-      <slider :slides="slides"></slider>
       <h1 class="title">
         Other
       </h1>
       <h2 class="subtitle">
         これまでに制作してきたプロダクト
       </h2>
+      <slider :slides="slides"></slider>
     </div>
   </section>
 </div>
