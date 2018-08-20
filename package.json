@@ -13,6 +13,7 @@
     "heroku-postbuild": "npm run build"
   },
   "dependencies": {
+    "@nuxtjs/vuetify": "^0.4.2",
     "element-ui": "^2.4.6",
     "http-server": "^0.11.1",
     "nuxt": "^1.0.0",
