@@ -1,83 +1,109 @@
 <template>
-<el-row class="tac">
-  <el-col :span="4">
-    <el-menu
-      default-active="1"
-      class="el-menu-vertical-demo"
-      @open="handleOpen"
-      @close="handleClose"
-      background-color="#545c64"
-      text-color="#fff"
-      active-text-color="#ffd04b">
-      <el-submenu index="1">
-        <template slot="title">
-          <i class="el-icon-menu"></i>
-          <span>Menu</span>
-        </template>
-          <el-menu-item index="1-1"><nuxt-link to="/">Top</nuxt-link></el-menu-item>
-          <el-menu-item index="1-2"><nuxt-link to="/profile">Profile</nuxt-link></el-menu-item>
-        <el-submenu index="1-3">
-          <template slot="title">Products</template>
-          <div v-for="(p, key, index) in product" :key="index">
-            <el-menu-item :index="1-3-index"><nuxt-link :to="p.link">{{p.name}}</nuxt-link></el-menu-item>
-          </div>
-        </el-submenu>
-        <el-submenu index="1-4">
-          <template slot="title">SNS</template>
-          <div v-for="(s, key, index) in sns" :key="index">
-            <el-menu-item :index="1-4-index"><a :href="s.link">{{s.name}}</a></el-menu-item>
-          </div>
-        </el-submenu>
-        <el-submenu index="1-5">
-          <template slot="title">Work</template>
-          <div v-for="(w, key, index) in work" :key="index">
-            <el-menu-item :index="1-5-index"><a :href="w.link">{{w.name}}</a></el-menu-item>
-          </div>
-        </el-submenu>
-        <el-menu-item index="1-6"><a href="http://gamelinks007.hatenablog.com/">Blog</a></el-menu-item>
-        <el-menu-item index="1-7"><a href="https://github.com/S-H-GAMELINKS/myprofile">Source</a></el-menu-item>
-      </el-submenu>
-    </el-menu>
-  </el-col>
-</el-row>
-</template>
+  <v-navigation-drawer
+    stateless
+    value="true"
+  >
+    <v-list>
+      <v-list-tile>
+        <v-list-tile-action>
+          <v-icon>home</v-icon>
+        </v-list-tile-action>
+        <nuxt-link to="/"><v-list-tile-title>Top</v-list-tile-title></nuxt-link>
+      </v-list-tile>
 
-<style>
-a{
-  color: white;   
-}
-</style>
+      <v-list-group
+        value="true"
+      >
+        <v-list-tile slot="activator">
+          <v-list-tile-action>
+            <v-icon>fas fa-bars</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-title>MENU</v-list-tile-title>
+        </v-list-tile>
+
+        <v-list-tile>
+          <v-list-tile-action>
+            <v-icon>fas fa-user-alt</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-title><nuxt-link to="/profile">PROFILE</nuxt-link></v-list-tile-title>
+        </v-list-tile>
+
+        <v-list-group
+          no-action
+          sub-group
+          value="true"
+        >
+          <v-list-tile slot="activator">
+            <v-list-tile-title>PRODUCT</v-list-tile-title>
+          </v-list-tile>
+
+          <v-list-tile
+            v-for="(s, i) in product"
+            :key="i"
+          >
+            <nuxt-link :to="s[1]"><v-list-tile-title v-text="s[0]"></v-list-tile-title></nuxt-link>
+          </v-list-tile>
+        </v-list-group>
+
+        <v-list-group
+          no-action
+          sub-group
+          value="true"
+        >
+          <v-list-tile slot="activator">
+            <v-list-tile-title>SNS</v-list-tile-title>
+          </v-list-tile>
+
+          <v-list-tile
+            v-for="(s, i) in sns"
+            :key="i"
+          >
+            <nuxt-link :to="s[1]"><v-list-tile-title v-text="s[0]"></v-list-tile-title></nuxt-link>
+          </v-list-tile>
+        </v-list-group>
+
+        <v-list-group
+          no-action
+          sub-group
+          value="true"
+        >
+          <v-list-tile slot="activator">
+            <v-list-tile-title>WORK</v-list-tile-title>
+          </v-list-tile>
+
+          <v-list-tile
+            v-for="(s, i) in work"
+            :key="i"
+          >
+            <nuxt-link :to="s[1]"><v-list-tile-title v-text="s[0]"></v-list-tile-title></nuxt-link>
+          </v-list-tile>
+        </v-list-group>
+
+      </v-list-group>
+    </v-list>
+  </v-navigation-drawer>
+</template>
 
 <script>
   export default {
-    data: function() {
-        return {
-            product: [
-                {link: "/game", name: "Game" },
-                {link: "/other", name: "Other" },
-            ],
-            sns: [
-                {link: "https://gamelinks007.net/@S_H_", name: "Mastodon"},
-                {link: "https://github.com/S-H-GAMELINKS", name: "GitHub"},
-                {link: "https://twitter.com/GAME_LINKS_", name: "Twitter"},
-                {link: "https://qiita.com/S_H_", name: "Qiita"},
-                {link: "https://speakerdeck.com/gamelinks007", name: "SpeckerDeck"},
-            ],
-            work: [
-                {link: "https://www.lancers.jp/profile/S_H_", name: "Lancers" },
-                {link: "https://crowdworks.jp/public/employees/1497011", name: "CrowdWorks" },
-                {link: "https://coconala.com/users/410038", name: "Coconala" },
-                {link: "https://skima.jp/u/id33529/", name: "Skima" },
-            ]
-        }
-    },
-    methods: {
-      handleOpen(key, keyPath) {
-        console.log(key, keyPath);
-      },
-      handleClose(key, keyPath) {
-        console.log(key, keyPath);
-      }
-    }
+    data: () => ({
+      sns: [
+        [ 'Mastodon', 'https://gamelinks007.net/@S_H' ],
+        [ 'GitHub',  'https://github.com/S-H-GAMELINKS' ],
+        [ 'Twitter', 'https://twitter.com/GAME_LINKS_' ],
+        [ 'Qiita', 'https://qiita.com/S_H_' ],
+        [ 'SpeckerDeck', 'https://speakerdeck.com/gamelinks007' ]
+      ],
+      product: [
+        [ 'Game', '/game' ],
+        [ 'Other', '/other' ]
+      ],
+      work: [
+        [ 'Lancers', 'https://www.lancers.jp/profile/S_H_' ],
+        [ 'CrowdWorks', 'https://crowdworks.jp/public/employees/1497011"' ],
+        [ 'Coconala', 'https://coconala.com/users/410038' ],
+        [ 'Skima', 'https://skima.jp/u/id33529/' ]
+      ]
+    })
   }
 </script>
