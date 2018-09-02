@@ -9,7 +9,7 @@
     "start-static": "http-server ./dist",
     "generate": "nuxt generate",
     "build": "nuxt build",
-    "start": "nuxt start",
+    "start": "HOST=0.0.0.0 PORT=8080 nuxt start",
     "heroku-postbuild": "npm run build"
   },
   "dependencies": {
